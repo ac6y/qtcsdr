@@ -10,6 +10,12 @@
     <height>240</height>
    </rect>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>320</width>
+    <height>240</height>
+   </size>
+  </property>
   <property name="font">
    <font>
     <pointsize>7</pointsize>
@@ -23,342 +29,293 @@
     <property name="spacing">
      <number>1</number>
     </property>
-    <property name="leftMargin">
-     <number>0</number>
-    </property>
-    <property name="topMargin">
-     <number>0</number>
-    </property>
-    <property name="rightMargin">
-     <number>0</number>
-    </property>
-    <property name="bottomMargin">
+    <property name="margin">
      <number>0</number>
     </property>
     <item>
-     <widget class="QMySpectrumWidget" name="widgetFFT" native="true"/>
-    </item>
-    <item>
-     <widget class="QWidget" name="widgetControls" native="true">
-      <property name="minimumSize">
-       <size>
-        <width>160</width>
-        <height>120</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>159</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>7</pointsize>
-       </font>
-      </property>
-      <widget class="QLabel" name="label">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>40</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Frequency:</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="toggleAM">
-       <property name="geometry">
-        <rect>
-         <x>420</x>
-         <y>0</y>
-         <width>20</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>AM</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_2">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>80</y>
-         <width>40</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Offset:</string>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="spinFreq">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>0</y>
-         <width>100</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="maximum">
-        <number>1999999999</number>
-       </property>
-       <property name="singleStep">
-        <number>1000</number>
-       </property>
-       <property name="value">
-        <number>89500000</number>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="spinOffset">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>80</y>
-         <width>100</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="minimum">
-        <number>-1200000</number>
-       </property>
-       <property name="maximum">
-        <number>1200000</number>
-       </property>
-       <property name="singleStep">
-        <number>100</number>
-       </property>
-       <property name="value">
-        <number>200000</number>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="toggleWFM">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>0</y>
-         <width>20</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>WFM</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-       <property name="checked">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="toggleUSB">
-       <property name="geometry">
-        <rect>
-         <x>480</x>
-         <y>0</y>
-         <width>20</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>USB</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="toggleLSB">
-       <property name="geometry">
-        <rect>
-         <x>540</x>
-         <y>0</y>
-         <width>20</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>LSB</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="toggleRun">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>80</y>
-         <width>100</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Receive</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="toggleNFM">
-       <property name="geometry">
-        <rect>
-         <x>360</x>
-         <y>0</y>
-         <width>20</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>NFM</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="spinCenter">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>40</y>
-         <width>100</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="maximum">
-        <number>1999999999</number>
-       </property>
-       <property name="singleStep">
-        <number>1000</number>
-       </property>
-       <property name="value">
-        <number>89300000</number>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_3">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>40</y>
-         <width>40</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Center:</string>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="comboDirectSamp">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>42</y>
-         <width>100</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <item>
-        <property name="text">
-         <string>Quadrature sampling</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Direct sampling (I branch)</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Direct sampling (Q branch)</string>
-        </property>
-       </item>
-      </widget>
-      <widget class="QPushButton" name="toggleTransmit">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="geometry">
-        <rect>
-         <x>450</x>
-         <y>80</y>
-         <width>100</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Transmit</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_4">
+     <widget class="QMySpectrumWidget" name="widgetFFT" native="true">
+      <widget class="QWidget" name="widgetControls" native="true">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>120</y>
-         <width>100</width>
-         <height>30</height>
+         <width>321</width>
+         <height>120</height>
         </rect>
        </property>
-       <property name="text">
-        <string>Samp. rate:</string>
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>120</height>
+        </size>
        </property>
-      </widget>
-      <widget class="QComboBox" name="comboSampRate">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>120</y>
-         <width>100</width>
-         <height>20</height>
-        </rect>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>159</height>
+        </size>
        </property>
-       <property name="currentIndex">
-        <number>0</number>
+       <property name="font">
+        <font>
+         <pointsize>7</pointsize>
+        </font>
        </property>
-       <item>
-        <property name="text">
-         <string>2400000</string>
+       <widget class="QPushButton" name="toggleRun">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>0</y>
+          <width>81</width>
+          <height>101</height>
+         </rect>
         </property>
-       </item>
-       <item>
         <property name="text">
-         <string>2048000</string>
+         <string>RX</string>
         </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>1200000</string>
+        <property name="checkable">
+         <bool>true</bool>
         </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>1024000</string>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>115</width>
+          <height>100</height>
+         </rect>
         </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>960000</string>
+        <layout class="QFormLayout" name="formLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Freq</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="spinFreq">
+           <property name="maximum">
+            <number>1999999999</number>
+           </property>
+           <property name="singleStep">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>89500000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Cent</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="spinCenter">
+           <property name="maximum">
+            <number>1999999999</number>
+           </property>
+           <property name="singleStep">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>89300000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Offset</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSpinBox" name="spinOffset">
+           <property name="minimum">
+            <number>-1200000</number>
+           </property>
+           <property name="maximum">
+            <number>1200000</number>
+           </property>
+           <property name="singleStep">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>200000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>SRate</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QComboBox" name="comboSampRate">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>2400000</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2048000</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1200000</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1024000</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>960000</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>480000</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>240000</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>0</y>
+          <width>121</width>
+          <height>101</height>
+         </rect>
         </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>480000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>240000</string>
-        </property>
-       </item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0" colspan="2">
+          <widget class="QPushButton" name="toggleWFM">
+           <property name="text">
+            <string>WFM</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2" colspan="2">
+          <widget class="QPushButton" name="toggleNFM">
+           <property name="text">
+            <string>NFM</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="toggleLSB">
+           <property name="text">
+            <string>LSB</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" colspan="2">
+          <widget class="QPushButton" name="toggleAM">
+           <property name="text">
+            <string>AM</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QPushButton" name="toggleUSB">
+           <property name="text">
+            <string>USB</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="4">
+          <widget class="QComboBox" name="comboDirectSamp">
+           <item>
+            <property name="text">
+             <string>Quadrature sampling</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Direct sampling (I branch)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Direct sampling (Q branch)</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="4">
+          <widget class="QPushButton" name="toggleTransmit">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>TX</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <zorder>toggleRun</zorder>
+       <zorder>label</zorder>
+       <zorder>toggleAM</zorder>
+       <zorder>label_2</zorder>
+       <zorder>spinFreq</zorder>
+       <zorder>spinOffset</zorder>
+       <zorder>toggleWFM</zorder>
+       <zorder>toggleUSB</zorder>
+       <zorder>toggleLSB</zorder>
+       <zorder>toggleNFM</zorder>
+       <zorder>spinCenter</zorder>
+       <zorder>label_3</zorder>
+       <zorder>toggleTransmit</zorder>
+       <zorder>label_4</zorder>
+       <zorder>comboSampRate</zorder>
+       <zorder>toggleWFM</zorder>
+       <zorder>toggleNFM</zorder>
+       <zorder>spinOffset</zorder>
+       <zorder>comboSampRate</zorder>
       </widget>
      </widget>
     </item>
