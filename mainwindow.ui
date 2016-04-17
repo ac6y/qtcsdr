@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>320</width>
-    <height>240</height>
+    <width>480</width>
+    <height>320</height>
    </rect>
   </property>
   <property name="maximumSize">
    <size>
-    <width>320</width>
-    <height>240</height>
+    <width>480</width>
+    <height>320</height>
    </size>
   </property>
   <property name="font">
@@ -34,11 +34,20 @@
     </property>
     <item>
      <widget class="QMySpectrumWidget" name="widgetFFT" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>480</width>
+        <height>320</height>
+       </size>
+      </property>
       <widget class="QWidget" name="widgetControls" native="true">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>120</y>
+         <x>30</x>
+         <y>190</y>
          <width>321</width>
          <height>120</height>
         </rect>
@@ -60,23 +69,7 @@
          <pointsize>7</pointsize>
         </font>
        </property>
-       <widget class="QPushButton" name="toggleRun">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>0</y>
-          <width>81</width>
-          <height>101</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>RX</string>
-        </property>
-        <property name="checkable">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -200,13 +193,13 @@
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>120</x>
           <y>0</y>
-          <width>121</width>
-          <height>101</height>
+          <width>201</width>
+          <height>109</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout">
@@ -282,7 +275,7 @@
            </item>
           </widget>
          </item>
-         <item row="3" column="0" colspan="4">
+         <item row="3" column="0" colspan="3">
           <widget class="QPushButton" name="toggleTransmit">
            <property name="enabled">
             <bool>false</bool>
@@ -297,25 +290,22 @@
          </item>
         </layout>
        </widget>
-       <zorder>toggleRun</zorder>
-       <zorder>label</zorder>
-       <zorder>toggleAM</zorder>
-       <zorder>label_2</zorder>
-       <zorder>spinFreq</zorder>
-       <zorder>spinOffset</zorder>
-       <zorder>toggleWFM</zorder>
-       <zorder>toggleUSB</zorder>
-       <zorder>toggleLSB</zorder>
-       <zorder>toggleNFM</zorder>
-       <zorder>spinCenter</zorder>
-       <zorder>label_3</zorder>
-       <zorder>toggleTransmit</zorder>
-       <zorder>label_4</zorder>
-       <zorder>comboSampRate</zorder>
-       <zorder>toggleWFM</zorder>
-       <zorder>toggleNFM</zorder>
-       <zorder>spinOffset</zorder>
-       <zorder>comboSampRate</zorder>
+      </widget>
+      <widget class="QPushButton" name="toggleRun">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>190</y>
+         <width>81</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RX</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
      </widget>
     </item>
